@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name         = 'AppsFlyerTvOsLib'
-    spec.version      = '1.0.0'
+    spec.version      = '1.0.1'
     spec.license      = {
 :type => 'Proprietary',
 :text => <<-LICENSE
@@ -16,13 +16,15 @@ Pod::Spec.new do |spec|
         AppsFlyer's NativeTrack allows you to find what attracts new users to your app, measure all your app marketing activities on one dashboard, and add new traffic sources in minutes, all without having to update SDK's.
     DESC
 
-    spec.platform     = :ios, '9.0'
+    spec.tvos.deployment_target = '9.0'
+    spec.platform     = :tvos, '10.0'
     spec.requires_arc = true
-    spec.frameworks   = 'AdSupport', 'iAd', "Security"
-    spec.source = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerTvOsLib.git', :tag => '1.0.0'}
+    spec.frameworks   = 'AdSupport', "Security"
+    spec.source = { :git => 'https://github.com/AppsFlyerSDK/AppsFlyerTvOsLib.git', :tag => '1.0.1'}
 
     spec.preserve_paths      = 'AppsFlyerTvOsLib.framework'
-    spec.public_header_files = 'AppsFlyerTvOsLib.framework/Headers'
-    spec.vendored_frameworks = 'AppsFlyerTvOsLib.framework'
+    spec.public_header_files = 'AppsFlyerTvOsLib.framework/Headers/*.h'
+#spec.vendored_frameworks = 'AppsFlyerTvOsLib.framework'
+    spec.source_files = 'AppsFlyerTvOsLib.framework/Headers/*.h'
 end
 
