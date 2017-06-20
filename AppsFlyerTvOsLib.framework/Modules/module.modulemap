@@ -1,7 +1,0 @@
-framework module AppsFlyerTvOsLib {
-  umbrella header "AppsFlyerTvOsLib.h"
-  header "AppsFlyerTracker.h"
-
-  export *
-  module * { export * }
-}
